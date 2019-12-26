@@ -12,16 +12,9 @@
     <img src="" alt="">
 </div>
 
-  <table width="100%" style="width:100%; background-color: red;">
-    <tr style="background-color: blue;">
+  <table width="100%" style="width:100%; background-color: white;">
+    <tr style="background-color: white;">
       <td>1</td>
-      <td>ateeq</td>
-      <td>ateeq</td>
-      <td>ateeq</td>
-      <td>ateeq</td>
-      <td>ateeq</td>
-      <td>ateeq</td>
-      <td>ateeq</td>
     </tr>
       <tr>
         <td>&nbsp;</td>
