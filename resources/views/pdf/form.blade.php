@@ -9,17 +9,23 @@
 </div>
 
 <div>
-    <img src="" alt="">
+    <img src="img/teeths.png" alt="" style="width: 100%">
+</div>
+
+<div style="background-color:grey; margin: 5px 0px 0px 0px; padding: 10px 0px;">
+    <span> 1st Stage </span>
 </div>
 
   <table width="100%" style="width:100%; background-color: white;">
     <tr style="background-color: white;">
       <td>1</td>
+      <td>1</td>
+      <td>1</td>
     </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+      <tr style="border: 9px solid black">
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
       </tr>
       <tr>
         <td>&nbsp;</td>
