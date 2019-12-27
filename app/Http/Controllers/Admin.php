@@ -94,12 +94,13 @@ class Admin extends Controller
         $pdf->setOption('no-stop-slow-scripts', true);
 
         // Session::put('data', null);
-        // Session::put('form1', null);
+        Session::forget('form1');
         // Session::put('form2', null);
         Session::put('check', false);
         // Session::put('redirect_back', 'yes');
 
         $name = 'Report-'.uniqid().'.pdf';
+        
         return $pdf->download($name);
     }
     public function step1(Request $request)
@@ -113,7 +114,7 @@ class Admin extends Controller
         # code...
     }
     public function step2view()
-    {  
+    {
         if( Session::get('form1') == null )
         {
             return Redirect::route('home');
@@ -122,7 +123,18 @@ class Admin extends Controller
     }
     public function download()
     {
-        $url = Session::get('download_link');
-        return $url->download($name);
+        $pdf = PDF::loadView('pdf.form')->setPaper('a4')->setOrientation('portrait')->setOption('margin-bottom', 0);
+        $pdf->setOption('enable-javascript', true);
+        $pdf->setOption('javascript-delay', 5000);
+        $pdf->setOption('enable-smart-shrinking', true);
+        $pdf->setOption('no-stop-slow-scripts', true);
+
+        // Session::put('data', null);
+        // Session::forget('form1');
+        // Session::put('form2', null);
+        // Session::put('check', false);
+        // Session::put('redirect_back', 'yes');
+        $name = 'Report-'.uniqid().'.pdf';
+        return $pdf->download($name);
     }
 }

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -147,6 +148,12 @@ $(document).ready(function() {
         });
 });
     $("#add_row").trigger("click");
+
+    if( session('download') == 'ok' )
+    { 
+        window.location.href = "/home";
+    }
+
 });
 </script>
 @endsection

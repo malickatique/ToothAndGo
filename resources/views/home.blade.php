@@ -151,6 +151,7 @@ $(document).ready(function() {
         });
 });
     $("#add_row").trigger("click");
+
 });
 </script>
 @endsection
