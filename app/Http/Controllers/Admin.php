@@ -93,7 +93,8 @@ class Admin extends Controller
         // Session::put('form1', null);
         // Session::put('form2', null);
         Session::put('check', false);
-        
+        // Session::put('redirect_back', 'yes');
+
         $name = 'Report-'.uniqid().'.pdf';
         return $pdf->download($name);
     }

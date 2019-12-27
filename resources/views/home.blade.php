@@ -2,10 +2,6 @@
 
 @section('content')
 
-@if(Session::has('download_link'))
-    <meta http-equiv="refresh" content="5;url={{ Session::get('download_link') }}">
-@endif
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
