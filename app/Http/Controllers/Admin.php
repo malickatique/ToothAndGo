@@ -8,6 +8,10 @@ use PDF;
 class Admin extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function printPDF(Request $request)
     {
         if( !Session::get('form1') )
