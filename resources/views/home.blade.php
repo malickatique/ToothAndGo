@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if(Session::has('download_link'))
+    <meta http-equiv="refresh" content="5;url={{ Session::get('download_link') }}">
+@endif
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -75,7 +80,13 @@
                         <div class="form-group row">
                             <label for="email" class="col-md-2 col-form-label text-center text-md-right">{{ __('Enter discount for cash Payments in %') }}</label>
                             <div class="col-md-3">
-                                <input id="discount" type="number" placeholder="Enter Discount" class="form-control mt-2" name="discount" value="{{ old('discount') }}" minlength="1" maxlength="10" required>
+                                <input id="discount" type="number" placeholder="Enter Discount" class="form-control mt-2" name="discount" value="{{ old('discount') }}" minlength="1" maxlength="2" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-2 col-form-label text-center text-md-right">{{ __('Duration (total nights stay)') }}</label>
+                            <div class="col-md-3">
+                                <input id="nights" type="number" placeholder="Enter Duration" class="form-control mt-2" name="nights" value="{{ old('nights') }}" minlength="1" maxlength="10" required>
                             </div>
                         </div>
 
@@ -89,7 +100,7 @@
     </div>
 </div>
 
-
+<div style='margin: 200px 0px;'></div>
 
 @endsection
 

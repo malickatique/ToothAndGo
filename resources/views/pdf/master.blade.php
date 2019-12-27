@@ -2,9 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <title> Tooth & Go Clinic </title>
-
-</head>
-<style>
+  <style>
   body{
     font-family: verdana;
   }
@@ -22,7 +20,7 @@
   }
   td {
     text-align: center;
-    padding: 15px 8px;
+    padding: 20px 8px;
   }
   tr:nth-child(even){background-color: #f2f2f2}
 /* Images Grid Styling */
@@ -47,7 +45,8 @@
   vertical-align: middle;
 }
 /* / Images Grid Styling */
-</style>
+  </style>
+</head>
 <body>
 
 
