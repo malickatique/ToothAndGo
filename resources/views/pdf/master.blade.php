@@ -17,17 +17,39 @@
   }
   th{
     background-color: #FFDF3E;
-    text-align: left;
+    text-align: center;
     padding: 15px 8px;
   }
   td {
-    text-align: left;
-    padding: 40px 8px;
+    text-align: center;
+    padding: 15px 8px;
   }
   tr:nth-child(even){background-color: #f2f2f2}
-
+/* Images Grid Styling */
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+/* / Images Grid Styling */
 </style>
 <body>
+
 
 
 @yield('content')

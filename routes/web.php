@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/print-pdf', 'Admin@printPDF')->name('printpdf');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/step1', 'Admin@step1')->name('step1');
+Route::get('/step2', 'Admin@step2view')->name('step2');

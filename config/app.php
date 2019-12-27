@@ -177,6 +177,7 @@ return [
         
         // HTML to PDF Converter
         Barryvdh\DomPDF\ServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
 
     ],
 
@@ -230,7 +231,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         // HTML to PDF converter
-        'PDF' => Barryvdh\DomPDF\Facade::class,
+        'PDFDom' => Barryvdh\DomPDF\Facade::class,
+        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
     ],
 
 ];

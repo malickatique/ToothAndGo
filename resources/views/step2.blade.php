@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Generate a Slip for Patient</div>
-                <h4 class="pt-4 px-4 text-center"> Stage 1: </h4>
+                <h4 class="pt-4 px-4 text-center"> Stage 2: </h4>
                 <hr>
                 <div class="card-body">
                     @if (session('status'))
@@ -14,9 +14,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{ route('printpdf') }}">Print PDF</a>
 
-                    <form action="{{ route('step1') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('printpdf') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row clearfix">
                             <div class="col-md-12 table-responsive">
@@ -68,19 +67,16 @@
                                 </table>
                             </div>
                         </div>
-                        
-                        <a id="add_row" class="btn btn-primary float-right text-white">+ Add Row</a>  
-
+                        <a id="add_row" class="btn btn-primary float-right text-white">+ Add Row</a> 
                         <hr class="mt-5">
                         <div class="form-group row">
                             <label for="email" class="col-md-2 col-form-label text-center text-md-right">{{ __('Enter discount for cash Payments in %') }}</label>
                             <div class="col-md-3">
                                 <input id="discount" type="number" placeholder="Enter Discount" class="form-control mt-2" name="discount" value="{{ old('discount') }}" minlength="1" maxlength="10" required>
                             </div>
-                        </div>
-
+                        </div> 
                         <div class="col-md-12 text-center mt-5">  
-                            <button class="btn btn-primary mx-3" type="submit">Proceed to next step ></button>
+                            <button class="btn btn-primary mx-3" type="submit">Generate Form</button>
                         </div>
                     </form>
                 </div>
